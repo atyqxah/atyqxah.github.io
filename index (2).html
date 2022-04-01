@@ -1,0 +1,457 @@
+<html>
+    <title>ATYQXAH SPACE</title> 
+    <head>
+        <style>
+            
+            body {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%  {background-color: red;}
+  25% {background-color: yellow;}
+  50% {background-color: blue;}
+  100% {background-color: green;}
+}
+            :root {
+  --main-flower: #517bd6;
+  --nose: #ffc0cb;
+  --stem: #51d691;
+  --pot: #FF7043;
+  --pot-shadow: #d66f51;
+}
+.flower {
+  position: absolute;
+}
+.flower__head {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--main-flower);
+  margin-top: 50px;
+}
+
+.flower__head::after, .flower__head::before {
+  content: '';
+  position: absolute;
+  background: var(--main-flower);
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  transform: rotate(60deg);
+}
+
+.flower__head::before {
+  transform: rotate(-60deg);
+}
+.flower__eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+}
+.flower__eye.left {
+  left: 30%;
+}
+.flower__eye.right {
+  left: 55%;
+}
+.flower__eye span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.flower__nose {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  background: var(--nose);
+  border-radius: 50%;
+}
+.flower__stem {
+  position: absolute;
+  height: 150px;
+  width: 8px;
+  background: var(--stem);
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.flower__leaf {
+  width: 30px;
+  height: 30px;
+  background: var(--stem);
+  position: absolute;
+  top: 130px;
+  left: 21px;
+  border-radius: 50px;
+  border-top-right-radius: 0;
+  transform: var(--transform-leaves-left);
+}
+.flower__leaf--shadow {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+  height: 15px;
+  width: 15px;
+  top: 144px;
+  left: 29px;
+  border-radius: 50px;
+  border-top-right-radius: 0;
+  transform: var(--transform-leaves-left);
+}
+.flower__leaf--shadow.oposite {
+  top: 164px;
+  left: 75px;
+  transform: var(--transform-leaves-right);
+}
+.flower__leaf.oposite {
+  top: 150px;
+  left: 70px;
+  transform: var(--transform-leaves-right);
+}
+.flower__pot {
+  width: 100px;
+  height: 20px;
+  background-color: var(--pot);
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.flower__pot--shadow {
+      width: 72px;
+      position: absolute;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid var(--pot-shadow);
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .flower__pot--bottom {
+  width: 50px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 50px solid var(--pot);
+  top: 20px;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.flower__eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+  animation: blink 3s infinite; 
+}
+@keyframes blink {
+  0%, 100% {
+    transform: scale(1, 0.05);
+  }
+  5%, 95% {
+    transform: scale(1, 1);
+  }
+}
+.namespace {
+  align-self: center;
+  margin: 10px;
+  display: flex;
+}
+body{
+    background: #000000;
+}
+.bulb-holder{
+    width: 50px;
+    height: 40px;
+    background: teal;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: translate(630px,120px);
+    z-index: 1;
+}
+.bulb{
+    width: 50px;
+    height: 20px;
+    background: #fff;
+    border-radius: 60%;
+    transform: translate(0px,30px);
+    animation: light 2000ms infinite cubic-bezier(1, -0.45, 0, 1.89);
+}
+#b1{
+    transform: translate(750px,200px);
+}
+#b2{
+    transform: translate(500px,200px);
+}
+
+.front{
+    width: 500px;
+    height: 500px;
+    background: #021414;
+    transform: translate(400px,100px);
+}
+#love{
+    width: 200px;
+    height: 100px;
+    transform: translate(190px,200px);
+}
+#love h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: cursive;
+    background: radial-gradient(purple,lightcoral,yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 500ms infinite;
+}
+@keyframes gradient{
+    25%{
+        background: radial-gradient(purple,rgb(240, 128, 221),yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: radial-gradient(aqua,dodgerblue,red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    75%{
+        background: radial-gradient(rgb(233, 2, 156),rgb(64, 243, 47),yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100%{
+        background: radial-gradient(rgb(105, 128, 0),rgb(27, 240, 204),yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes light{
+    10%{
+        box-shadow: 0 1px 10px yellow,
+                0 2px 20px yellow,
+                10px 20px 30px yellow,            
+                -10px 20px 30px yellow,            
+                30px 50px 50px yellow,          
+                -30px 50px 50px yellow;
+
+    }
+    20%{
+        box-shadow: none;
+    }
+    30%{
+        box-shadow: 0 1px 10px lightcoral,
+                0 2px 20px lightcoral,
+                10px 20px 30px lightcoral,            
+                -10px 20px 30px lightcoral,            
+                30px 50px 50px lightcoral,          
+                -30px 50px 50px lightcoral;
+
+    }
+    40%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 1px 10px aqua,
+                0 2px 20px aqua,
+                10px 20px 30px aqua,            
+                -10px 20px 30px aqua,            
+                30px 50px 50px aqua,          
+                -30px 50px 50px aqua;
+
+    }
+    60%{
+        box-shadow: none;
+    }
+    70%{
+        box-shadow: 0 1px 10px purple,
+                0 2px 20px purple,
+                10px 20px 30px purple,            
+                -10px 20px 30px purple,            
+                30px 50px 50px purple,          
+                -30px 50px 50px purple;
+
+    }
+    80%{
+        box-shadow: 0 1px 10px tomato,
+        0 2px 20px tomato,
+        10px 20px 30px tomato,            
+        -10px 20px 30px tomato,            
+        30px 50px 50px tomato,          
+        -30px 50px 50px tomato;
+    } 
+    90%{
+        box-shadow: 0 1px 10px yellow,
+        0 2px 20px yellow,
+        10px 20px 30px yellow,            
+        -10px 20px 30px yellow,            
+        30px 50px 50px yellow,          
+        -30px 50px 50px yellow,
+        40px 60px 100px yellow,          
+        -40px 60px 100px yellow,
+        70px 70px 100px yellow,          
+        -70px 70px 100px yellow;
+    }
+    100%{
+        box-shadow: 0 1px 10px yellow,
+        0 2px 20px yellow,
+        10px 20px 30px yellow,            
+        -10px 20px 30px yellow,            
+        30px 50px 50px yellow,          
+        -30px 50px 50px yellow,
+        40px 60px 100px yellow,          
+        -40px 60px 100px yellow,
+        70px 70px 100px yellow,          
+        -70px 70px 100px yellow;
+    }
+}
+.furniture{
+    transform: translate(-20px,10px);
+}
+.table{
+    width: 300px;
+    height: 100px;
+    background: rgb(56, 25, 4);
+    transform: translate(-120px,-50px);
+    border-radius: 50%;
+}
+.table_legs{
+    width: 50px;
+    height: 100px;
+    background: rgb(36, 16, 3);
+    transform: translate(650px,10px);
+}
+.table_end{
+    width: 100px;
+    height: 30px;
+    background: rgb(37, 16, 2);
+    transform: translate(-25px,-25px);
+    border-radius: 50%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+.chair{
+    width: 100px;
+    height: 50px;
+    /* background: rgb(56, 25, 4); */
+    background: rgb(2, 44, 44);
+    border-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; 
+    transform: translate(464px,-73px);
+}
+.back{
+    width: 25px;
+    height: 20px;
+    background: rgb(48, 21, 3);
+    transform: translate(40px,50px);
+}
+.legs{
+    width: 50px;
+    height: 30px;
+    background: rgb(47, 23, 6);
+    border-radius: 30%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: translate(25px,40px);
+}
+#chair1{
+    transform: translate(774px,-112px);
+}
+#chair1 .back{
+    height: 20px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="flower">
+
+            <div class="flower__head">
+              <div class="flower__eye left">
+                <span></span>
+              </div>
+              <div class="flower__nose"></div>
+              <div class="flower__eye right">
+                <span></span>
+              </div>
+            </div>
+        
+            <div class="flower__leaf"></div>
+            <div class="flower__leaf--shadow">
+            </div>
+            <div class="flower__leaf oposite"></div>
+            <div class="flower__leaf--shadow oposite"></div>
+        
+            <div class="flower__stem"></div>
+        
+            <div class="flower__pot">
+              <div class="flower__pot--shadow"></div>
+              <div class="flower__pot--bottom"></div>
+            </div>
+          </div>
+          <div class="namespace" style="font-size:80px;">
+            <a href="https://github.com/atyqxah">ATYQXAH SPACE</a>
+        </div>
+          <div class="bulb-holder">
+            <div class="bulb">
+                <div class="light"></div>
+            </div>
+        </div>
+    
+        <div class="bulb-holder" id="b1">
+            <div class="bulb">
+                <div class="light"></div>
+            </div>
+        </div>
+        <div class="bulb-holder" id="b2">
+            <div class="bulb">
+                <div class="light"></div>
+            </div>
+        </div>
+        <div class="front">
+            <div id="love"><h1>L<sup>ov</sup>3</h1></div>
+        </div>
+        
+    <div class="furniture">
+    
+        <div class="table_legs">
+            <div class="table"></div>
+            <div class="table_end"></div>
+        </div>
+        <div class="chair">
+            <div class="back"></div>
+            <div class="legs"></div>
+        </div>
+    
+        <div class="chair" id="chair1">
+            <div class="back"></div>
+            <div class="legs"></div>
+        </div>
+    
+        </div>
+    </body>
+</html> 
